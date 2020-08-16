@@ -40,6 +40,10 @@
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
+    #logo-white{
+        width: 95;
+        height: 15;
+    }
 
   .links { grid-area: links; 
     margin-top: 25px;
@@ -187,13 +191,41 @@
     .end {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: minmax(20px, 70px) 1fr;
         gap: 1px 1px;
-        grid-template-areas: "footer footer footer" ". . .";
+        grid-template-areas: "footer footer footer" ;
         grid-area: end;
         background-color: #2D324C;
       }
-      
+
+      .end table {
+        margin: 60px;
+        text-align: left; 
+        table-layout: fixed; 
+        width: 100%;
+      }
+      .end td {
+        color: hsl(233, 8%, 62%);
+        font-family: 'Public Sans', sans-serif;
+        font-weight: lighter;
+        table-layout: fixed; 
+        width: 200px;
+      }
+      .end img.social {
+          width: 20px;
+          height: 20px;
+      }
+      .end img.social:hover{
+          background-color: rgba(49, 196, 190, 0.75);
+      }
+      .end td.copyr{
+          font-size: 10px;
+          text-align: center;
+          padding-left: 25px;
+      }
+      .end a:hover {
+          color: turquoise;
+      }
       .footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
