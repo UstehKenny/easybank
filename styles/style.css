@@ -12,7 +12,6 @@
     font-family: 'Public Sans', sans-serif;
     font-size: 18px;
     background-color: transparent;
-    background-image: url('/img/bg-intro-desktop.svg');
     background-position: bottom right;
     background-repeat: repeat;
     min-height: 100%;
@@ -21,7 +20,7 @@
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: minmax(20px, 70px) 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(20px, 70px) 1fr 1fr minmax(50px, auto) 1fr 1fr 1fr;
     gap: 1px 1px;
     grid-template-areas: "logo links links button" "intro intro img img" "info info info info" "article article article article" "end end end end";
     margin: 0px;
@@ -119,6 +118,7 @@
       color: hsl(233, 26%, 24%);
       font-family: 'Public Sans', sans-serif;
       font-weight: lighter;
+      font-size: 40px;
       margin-left: 60px;
   }
   .intro p {
@@ -140,8 +140,8 @@
   }
   .img img.mobile{
       position: absolute;
-      width: 550px;
-      height: 690px;
+      width: 540px;
+      height: 650px;
       right : 100px;
   }
   /*Info Section (Why choose Easybank?)*/
@@ -149,7 +149,7 @@
         grid-area: info;
         background-color: #F4F5F7;
         padding-top: 80px;
-        padding-bottom: 80px;
+        padding-bottom: 100px;
     }
     .info h1 {
         color: hsl(233, 26%, 24%);
@@ -164,7 +164,7 @@
         margin-left: 60px;
     }
     .info table {
-        margin: 60px;
+        margin-left: 60px;
         text-align: left;
     }
     .info th {
@@ -185,7 +185,84 @@
     .article {
         grid-area: article;
         background-color: #fafafa;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
+    .article h1 {
+        color: hsl(233, 26%, 24%);
+        font-family: 'Public Sans', sans-serif;
+        font-weight: lighter;
+        margin-left: 60px;
+    }
+
+    div.gallery {
+        border: 1px solid rgb(255, 255, 255);
+        background-color: white;
+        border-radius: 15px 15px 0px 0px;
+      }
+      
+      div.gallery:hover {
+        border: 1px solid rgb(232, 232, 232);
+      }
+      
+      div.gallery img {
+        width: 285px;
+        height: 200px;
+        align-items: center;
+        border-radius: 15px 15px 0px 0px;
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: left;
+        color: hsl(233, 8%, 62%);
+        font-weight: lighter;
+      }
+      .article h4{
+        font-weight: lighter;
+        font-size: 15px;
+      }
+      .article h3{
+        font-weight: lighter;
+        color: hsl(233, 26%, 24%);
+      }
+      .article h3:hover{
+        color: rgba(49, 196, 190, 0.75);
+      }
+      .article p{
+        font-size: 15px;
+        font-weight: lighter;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+      
+      .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 300px;
+        margin-left: 45px;
+      }
+      
+      @media only screen and (max-width: 700px) {
+        .responsive {
+          width: 49.99999%;
+          margin: 6px 0;
+        }
+      }
+      
+      @media only screen and (max-width: 500px) {
+        .responsive {
+          width: 100%;
+        }
+      }
+      
+      .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
 
     /*Footer section*/
     .end {
@@ -199,10 +276,10 @@
       }
 
       .end table {
-        margin: 60px;
+        margin: 30px;
         text-align: left; 
         table-layout: fixed; 
-        width: 100%;
+        width: 150%;
       }
       .end td {
         color: hsl(233, 8%, 62%);
@@ -220,11 +297,11 @@
       }
       .end td.copyr{
           font-size: 10px;
-          text-align: center;
-          padding-left: 25px;
+          text-align: left;
+          padding-left: 30px;
       }
       .end a:hover {
-          color: turquoise;
+          color: rgba(49, 196, 190, 0.75);
       }
       .footer {
         display: grid;
@@ -234,19 +311,3 @@
         grid-template-areas: ". . ." ". . .";
         grid-area: footer;
       }
-
-
-    
- 
-/* 
-  @media screen and (max-width: 500px) {
-    .links a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    */
-
-  
-  
-
