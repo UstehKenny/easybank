@@ -14,17 +14,17 @@
     background-color: transparent;
     background-position: bottom right;
     background-repeat: repeat;
-    min-height: 100%;
   }
   /*Skeleton*/
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: minmax(20px, 70px) 1fr 1fr minmax(50px, auto) 1fr 1fr 1fr;
-    gap: 1px 1px;
     grid-template-areas: "logo links links button" "intro intro img img" "info info info info" "article article article article" "end end end end";
-    margin: 0px;
-    padding: 0px;
+    display: grid;
+    max-width: 1440px;
+    max-height: 1800px;
+
   }
     /*Header Section*/  
   .logo { 
@@ -269,17 +269,22 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: minmax(20px, 70px) 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "footer footer footer" ;
+        gap: 0px 0px;
+       /* grid-template-areas: "footer footer footer" ;*/
         grid-area: end;
         background-color: #2D324C;
+        max-width: 1440px;
+        max-height: 500px;
       }
 
       .end table {
-        margin: 30px;
+        
+        padding: 75px;
+        background-color: #2D324C;
         text-align: left; 
         table-layout: fixed; 
         width: 150%;
+        background-color: #2D324C;
       }
       .end td {
         color: hsl(233, 8%, 62%);
@@ -302,12 +307,4 @@
       }
       .end a:hover {
           color: rgba(49, 196, 190, 0.75);
-      }
-      .footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 1px 1px;
-        grid-template-areas: ". . ." ". . .";
-        grid-area: footer;
       }
