@@ -24,8 +24,8 @@
     display: grid;
     max-width: 1440px;
     max-height: 1800px;
-
   }
+  
     /*Header Section*/  
   .logo { 
       grid-area: logo;     
@@ -244,17 +244,24 @@
         width: 300px;
         margin-left: 45px;
       }
-      
-      @media only screen and (max-width: 700px) {
-        .responsive {
-          width: 49.99999%;
-          margin: 6px 0;
-        }
+      .hide-desktop{
+        display: none;
+      }
+
+        
       }
       
-      @media only screen and (max-width: 500px) {
+      @media only screen and (max-width: 375px) {
         .responsive {
-          width: 100%;
+          width: 80%;
+          align-content: center;
+          margin: 9%;
+        }
+        .hide {
+          display: none;
+        }
+        .hamburger{
+
         }
       }
       
@@ -262,6 +269,9 @@
         content: "";
         display: table;
         clear: both;
+      }
+      .article{
+        align:center;
       }
 
     /*Footer section*/
@@ -277,8 +287,7 @@
         max-height: 500px;
       }
 
-      .end table {
-        
+      .end table {     
         padding: 75px;
         background-color: #2D324C;
         text-align: left; 
