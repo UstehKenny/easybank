@@ -14,18 +14,18 @@
     background-color: transparent;
     background-position: bottom right;
     background-repeat: repeat;
-    min-height: 100%;
   }
   /*Skeleton*/
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: minmax(20px, 70px) 1fr 1fr minmax(50px, auto) 1fr 1fr 1fr;
-    gap: 1px 1px;
     grid-template-areas: "logo links links button" "intro intro img img" "info info info info" "article article article article" "end end end end";
-    margin: 0px;
-    padding: 0px;
+    display: grid;
+    max-width: 1440px;
+    max-height: 1800px;
   }
+  
     /*Header Section*/  
   .logo { 
       grid-area: logo;     
@@ -140,8 +140,8 @@
   }
   .img img.mobile{
       position: absolute;
-      width: 540px;
-      height: 650px;
+      width: 530px;
+      height: 630px;
       right : 100px;
   }
   /*Info Section (Why choose Easybank?)*/
@@ -244,42 +244,222 @@
         width: 300px;
         margin-left: 45px;
       }
-      
-      @media only screen and (max-width: 700px) {
-        .responsive {
-          width: 49.99999%;
-          margin: 6px 0;
-        }
+      .hide-desktop{
+        display: none;
       }
+
       
-      @media only screen and (max-width: 500px) {
-        .responsive {
-          width: 100%;
+      @media only screen and (max-width: 375px) {
+
+        .hide {
+          display: none;
         }
+  
+        .responsive {
+          width: 80%;
+          align-content: center;
+          margin: 9%;
+        }
+        #logo-img {
+          width: 95;
+          height: 15;
+          margin-top: 26px;
+          margin-left: 60px;
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+          background-color: white;
       }
+        .info{
+          display: inline;
+        }
+        .img-movil img.background-img{
+          position: absolute;
+          z-index: -1;
+          width: 220px;
+          height: 220px;
+          left: 0;
+          top: 0;
+        }
+        .img-movil img.mobile{
+          position: absolute;
+          width: 140px;
+          height: 160px;
+          top: 60px;
+          left: 30px;
+        }
+        footer {
+          background: #2d314d;
+          color: #9698a6;
+          font-size: 0.91rem;
+          margin: 0;
+          height: 507px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          display: -ms-grid;
+          display: inline;
+          -ms-grid-columns: 1fr;
+              grid-template-columns: 1fr;
+          -ms-grid-rows: 0.25fr 0.2fr 0.2fr 0.25fr;
+              grid-template-rows: 0.25fr 0.2fr 0.2fr 0.25fr;
+          gap: 8px 1px;
+              grid-template-areas: 'first'  'fourth' 'second'  'third';
+        }
+        
+        .footer-logo {
+          -ms-grid-row: 1;
+          -ms-grid-column: 1;
+          grid-area: first;
+          text-align: center;
+          -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+              align-self: center;
+        }
+        
+        .footer-links {
+          -ms-grid-row: 3;
+          -ms-grid-column: 1;
+          grid-area: second;
+          text-align: center;
+          -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+              align-self: center;
+        }
+        
+        #footer-button {
+          -ms-grid-row: 4;
+          -ms-grid-column: 1;
+          grid-area: third;
+          text-align: center;
+          -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+              align-self: center;
+        }
+        
+        .socials {
+          -ms-grid-row: 2;
+          -ms-grid-column: 1;
+          grid-area: fourth;
+          text-align: center;
+          -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+              align-self: center;
+        }
+
+}
       
       .clearfix:after {
         content: "";
         display: table;
         clear: both;
       }
+      .article{
+        align:center;
+      }
 
-    /*Footer section*/
+      footer{
+        background-color: #2D324C;
+        grid-area: end;
+        align-items: center;
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-columns: 0.7fr 1fr 1.4fr;
+        grid-template-columns: 1fr 1fr 1.4fr;
+        -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 40px 60px;
+        grid-template-areas: 'uno dos tres'  'cuatro dos tres';
+        padding-left: 10%;
+      }
+      .footer-logo {
+        align-self: center;
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        grid-area: uno;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        
+      }
+      #footer-button{
+        align-self: center;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        -ms-grid-column: 3;
+        grid-area: tres;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+      }
+      .socials{
+        align-self: middle;
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        grid-area: cuatro;
+        -ms-flex-item-align: middle;
+        -ms-grid-row-align: middle;
+      }
+      .social{
+        padding: 0 6px 0 0;
+        -webkit-column-gap: 6px;
+        column-gap: 6px;
+        height: 22px;
+      }
+      .socials img:hover{
+        background-color: rgba(49, 196, 190, 0.75);
+      }
+      .footer-links{
+        text-align: left;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        -webkit-column-gap: 58px;
+        column-gap: 58px;
+      }
+
+      .footer-links ul{
+        list-style-type: none;
+        padding: 0%;
+      }
+      ul.footermap-link a {
+        color: white;
+        text-decoration:none;
+      }
+      ul.footermap-link a:hover{
+        color: rgba(49, 196, 190, 0.75);
+      }
+
+      .copyright{  
+        color: white;
+      }
+
+
+   
+/* 
+
     .end {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: minmax(20px, 70px) 1fr;
-        gap: 1px 1px;
-        grid-template-areas: "footer footer footer" ;
+        gap: 0px 0px;
+       /* grid-template-areas: "footer footer footer" ;
         grid-area: end;
         background-color: #2D324C;
+        max-width: 1440px;
+        max-height: 500px;
       }
 
-      .end table {
-        margin: 30px;
+      .end table {     
+        padding: 75px;
+        background-color: #2D324C;
         text-align: left; 
         table-layout: fixed; 
         width: 150%;
+        background-color: #2D324C;
       }
       .end td {
         color: hsl(233, 8%, 62%);
@@ -302,12 +482,5 @@
       }
       .end a:hover {
           color: rgba(49, 196, 190, 0.75);
-      }
-      .footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 1px 1px;
-        grid-template-areas: ". . ." ". . .";
-        grid-area: footer;
-      }
+      }*/
+      

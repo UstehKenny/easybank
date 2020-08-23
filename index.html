@@ -16,15 +16,23 @@
   <!--Header-->
   <div class="logo">
     <img id="logo-img" src="img/logo.svg" alt="">
+    <img class="hamburger hide-desktop" src="img/icon-hamburger.svg" alt="">
   </div>
-  <div class="links">
+  <div class="topnav hide-desktop ">
+    <a class="active" href="#">Home</a> 
+    <a href="#">About</a> 
+    <a href="#">Contact</a> 
+    <a href="#">Blog</a> 
+    <a href="#">Careers</a> 
+  </div>
+  <div class="links hide">
     <a class="active" href="#">Home</a> &nbsp; &nbsp; &nbsp;
     <a href="#">About</a> &nbsp; &nbsp; &nbsp;
     <a href="#">Contact</a> &nbsp; &nbsp; &nbsp;
     <a href="#">Blog</a> &nbsp; &nbsp; &nbsp;
     <a href="#">Careers</a> &nbsp; &nbsp; &nbsp;
   </div>
-  <div class="button" id="button-header"">
+  <div class="button hide" id="button-header"">
     <button class="btn-hover color-1">Request Invite</button>
   </div>
   <!--Intro-->
@@ -36,8 +44,13 @@
       <button class="btn-hover color-1">Request Invite</button>
     </div>
   </div>
-  <div class="img">
+
+  <div class="img hide">
     <img class="background-img" src="img/bg-intro-desktop.svg" alt=""/>
+    <img class="mobile" src="img/image-mockups.png" alt=""/>
+  </div>
+  <div class="img-movil hide-desktop">
+    <img class="background-img" src="img/bg-intro-mobile.svg" alt=""/>
     <img class="mobile" src="img/image-mockups.png" alt=""/>
   </div>
   <!--Info-->
@@ -72,6 +85,8 @@
         </tr>
       </table>
   </div>
+  <!--Info mobile-->
+
   <!--Articles-->
   <div class="article">
     <h1>Latest Articles</h1>
@@ -126,45 +141,41 @@
     <div class="clearfix"></div>
 
   </div>
-  <!--Footer-->
-  <div class="end">
-    <div class="footer">
-      <table>
-        <tr>
-          <td><div class="logo">
-            <img id="logo-white" src="img/logo-white.svg" alt="">
-          </div></td>
-          <td><a>About Us</a></td>
-          <td><a>Careers</a></td>
-          <td ><div class="button">
-            <button class="btn-hover color-1">Request Invite</button>
-          </div></td>
-        </tr>
-        <tr>
-          <td rowspan="2" colspan="1">
-            <img src="img/icon-facebook.svg" class="social" alt="">
-            <img src="img/icon-youtube.svg" class="social" alt="">
-            <img src="img/icon-twitter.svg" class="social" alt="">
-            <img src="img/icon-pinterest.svg" class="social" alt="">
-            <img src="img/icon-instagram.svg" class="social" alt="">
-          </td>
-          <td><a>Contact</a>  </td>
-          <td><a>Support</a></td>
-          <td class="copyr">© Easybank. All Rights Reserved</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><a>Blog</a></td>
-          <td><a>Privacy Policy</a></td>
-        </tr>
-      </table>
-    </div>
-  </div>
+  <footer>
+    
+      <div class="footer-logo">
+          <img src="img/logo-white.svg" id="logo-white">
+      </div>
+
+      <div class="socials">
+          <div>
+              <img src="img/icon-facebook.svg" class="social">
+              <img src="img/icon-youtube.svg" class="social" >
+              <img src="img/icon-twitter.svg" class="social">
+              <img src="img/icon-pinterest.svg" class="social">
+              <img src="img/icon-instagram.svg" class="social">
+          </div>
+      </div>
+
+      <div class="footer-links">
+          <ul class="footermap-link">
+              <li class="footer-linksli"><a href="#">About Us</a></li>
+              <li class="footer-linksli"><a href="#">Contact</a></li>
+              <li class="footer-linksli"><a href="#">Blog</a></li>
+              <li class="footer-linksli"><a href="#">Careers</a></li>
+              <li class="footer-linksli"><a href="#">Support</a></li>
+              <li class="footer-linksli"><a  href="#">Privacy Policy</a></li>
+          </ul>
+      </div>
+
+      <div class="button">        
+          <button id="footer-button" class="btn-hover color-1">Request Invite</button>     
+          <div class="copyright">
+              <p>© Easybank. All Rights Reserved</p>
+          </div>
+      </div>
+  
+  </footer>
 
 </div>
 
